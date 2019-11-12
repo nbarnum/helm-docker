@@ -1,5 +1,5 @@
 FROM alpine AS download
-ARG HELM_VERSION="v2.16.0"
+ARG HELM_VERSION="v2.16.1"
 RUN wget -q https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz -O - \
     | tar -xzO linux-amd64/helm > /bin/helm && \
     chmod +x /bin/helm
