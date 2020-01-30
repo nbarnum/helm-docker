@@ -7,13 +7,8 @@ $ docker pull nbarnum/helm
 ```
 
 ```
-$ docker run --rm \
-    -v ~/.helm:/.helm \
-    -v ~/.kube/config:/.kube/config:ro \
-    -v /etc/ssl:/etc/ssl:ro \
-    nbarnum/helm version
-Client: &version.Version{SemVer:"v2.11.0", GitCommit:"2e55dbe1fdb5fdb96b75ff144a339489417b146b", GitTreeState:"clean"}
-Server: &version.Version{SemVer:"v2.11.0", GitCommit:"2e55dbe1fdb5fdb96b75ff144a339489417b146b", GitTreeState:"clean"}
+$ docker run --rm --rm nbarnum/helm version
+version.BuildInfo{Version:"v3.0.3", GitCommit:"ac925eb7279f4a6955df663a0128044a8a6b7593", GitTreeState:"clean", GoVersion:"go1.13.6"}
 ```
 
 Enables easy switching of helm versions based on current context. Create `helm` shell script and put it in PATH:
@@ -23,10 +18,10 @@ Enables easy switching of helm versions based on current context. Create `helm` 
 
 case "$(kubectl config current-context)" in
     prod)
-        HELM_VERSION="v2.11.0"
+        HELM_VERSION="v2.16.1"
         ;;
     dev)
-        HELM_VERSION="v2.13.0"
+        HELM_VERSION="v3.0.3"
         ;;
     *)
         HELM_VERSION="latest"
