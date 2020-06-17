@@ -1,13 +1,13 @@
 #!/bin/bash
 
 if [[ $DOCKER_TAG == v2* ]]; then
-    echo "docker tag $IMAGE_NAME $DOCKER_REPO:v2"
-    echo "docker push $DOCKER_REPO:v2"
+    docker tag $IMAGE_NAME $DOCKER_REPO:v2
+    docker push $DOCKER_REPO:v2
 fi
 
 if [[ $DOCKER_TAG == v3* ]]; then
-    echo "docker tag $IMAGE_NAME $DOCKER_REPO:v3"
-    echo "docker tag $IMAGE_NAME $DOCKER_REPO:latest"
-    echo "docker push $DOCKER_REPO:v3"
-    echo "docker push $DOCKER_REPO:latest"
+    docker tag $IMAGE_NAME $DOCKER_REPO:v3
+    docker tag $IMAGE_NAME $DOCKER_REPO:latest
+    docker push $DOCKER_REPO:v3
+    docker push $DOCKER_REPO:latest
 fi
