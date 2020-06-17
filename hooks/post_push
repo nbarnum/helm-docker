@@ -1,3 +1,13 @@
-#!/bin/sh	
-docker tag $IMAGE_NAME $DOCKER_REPO:latest	
-docker push $DOCKER_REPO:latest
+#!/bin/bash
+
+if [[ $DOCKER_TAG == v2* ]]; then
+    echo "docker tag $IMAGE_NAME $DOCKER_REPO:2"
+    echo "docker push $DOCKER_REPO:2"
+fi
+
+if [[ $DOCKER_TAG == v3* ]]; then
+    echo "docker tag $IMAGE_NAME $DOCKER_REPO:3"
+    echo "docker tag $IMAGE_NAME $DOCKER_REPO:latest"
+    echo "docker push $DOCKER_REPO:3"
+    echo "docker push $DOCKER_REPO:latest"
+fi
