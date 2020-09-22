@@ -2,6 +2,13 @@
 
 [Helm](https://helm.sh/) binaries in scratch containers.
 
+## Tags
+
+* `v3.3.2`, `v3`, `3`, `latest`
+* `v2.16.12`, `v2`, `2`
+
+## Usage
+
 ```
 $ docker pull nbarnum/helm
 ```
