@@ -15,7 +15,7 @@ $ docker pull nbarnum/helm
 
 ```
 $ docker run --rm --rm nbarnum/helm version
-version.BuildInfo{Version:"v3.0.3", GitCommit:"ac925eb7279f4a6955df663a0128044a8a6b7593", GitTreeState:"clean", GoVersion:"go1.13.6"}
+version.BuildInfo{Version:"v3.3.4", GitCommit:"a61ce5633af99708171414353ed49547cf05013d", GitTreeState:"clean", GoVersion:"go1.14.9"}
 ```
 
 Enables easy switching of helm versions based on current context. Create `helm` shell script and put it in PATH:
