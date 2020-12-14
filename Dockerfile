@@ -1,5 +1,5 @@
 FROM alpine AS download
-ARG HELM_VERSION="v3.4.1"
+ARG HELM_VERSION="v3.4.2"
 RUN wget -q https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz -O - \
     | tar -xzO linux-amd64/helm > /bin/helm && \
     chmod +x /bin/helm
